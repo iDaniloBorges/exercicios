@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="">
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.658);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            background: gray;
+            margin-top: 20px;
+            border-radius: 8px;
+            padding: 20px;
+            display: grid;
+            gap: 30px;
+        }
+        .musicas:nth-child(0){
+            margin-bottom: 20px;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-top: 60px;
+            background: gray;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        h2{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        audio{
+            border-radius: 25px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 8px;
+        }
+            #meuAudio::-webkit-media-controls {
+            display:block;
+        }
+    #meuAudio {
+      width: 300px;
+    }
+    </style>
+    <h1>Manipulando audios com HTML</h1>
+    <div class="container">
+        <div class="musicas">box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+            <h2>Ludwig Van Beethoven - 
+                Moonlight Sonata</h2>
+            <audio controls src="./audio/moonlight-beethoven.mp3" type="audio/mp3"></audio>
+        </div>
+        <div class="musicas">
+        <h2
+        >Tchaikovsky - Swan Lake</
+            h2>
+            <audio controls src="./audio/swanlake-tchaikovsky.mp3" type="audio/mp3"></audio>
+        </div>
+        <div class="musicas">
+            <h2>O corta-jaca - Chiquinha Gonzaga</h2>
+            <audio controls src="https://youtu.be/q2DUzJxUbYc?si=GExOOax_nnz3twHB" type="audio/mp3"></audio>
+        </div>
+    </div>
+
+    
+</body>
+</html>
