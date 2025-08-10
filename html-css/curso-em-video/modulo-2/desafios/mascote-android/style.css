@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+:root{
+    --cor1: #c5ebd6;
+    --cor2: #83e1ad;
+    --cor3: #3ddc84;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destque: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+      
+}
+body{
+    background-color: #E8E7C2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    padding: 15px;
+}
+header{
+    background-image: linear-gradient(to bottom, #3BD27F, #33B76E, #298F56, #247E4B, #1A5D38);
+    color: white;
+    text-align: center;
+    height: 200px;
+    padding-top: 1%;
+    padding-bottom: 0;
+    margin: -23px;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.329);
+    
+}
+.men{
+    color: white;
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+     
+}
+.men:hover{
+    background-color: #2b9b63d5;
+    border-radius: 5px;
+    color: #1D663D;
+}
+main{
+    background-color: white;
+    width: 1000px;
+    height: auto;
+    text-align: justify;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.329);
+    
+}
+.titulo{
+    font-family: var(--font-android);
+    color: #346F50;
+    text-align: left;
+    padding-top: 20px;
+    
+
+}
+.subtitulo {
+    font-family: var(--font-android);
+    color: #346F50;
+    text-align: left;
+    background-image: linear-gradient(to right, #C5EBD5 10%,#CDEDDC 10%, #DAF2E5 10%, #EDF8F2, white);
+
+    }
+.texto{
+    color: #195B37;
+    
+}
+h3{
+    background-color: #2FA866;
+}
+p{
+    text-indent: 30px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img{
+    text-align: center;
+}
+section#video{
+    text-align: center;
+    background-color: #1A5C38;
+    padding: 20px;
+    width: 1000px;
+    margin: auto;
+    
+}
+.destaque{
+    color: #1A5C38;
+}
+
+footer{
+    background-color: white;
+    width: 1000px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.329);
+    
+}
+footer > h3{
+    border-radius: 15px 15px 0px 0px ;
+    color: white;
+    text-align: left;
+    padding: 1%;
+}
+.lista{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 950px;
+    
+}
+.lista-coluna{
+    width: 50%;
+    
+
+    
+}
+ul{
+    list-style-type: none;
+}
+#subfooter{
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+#foot{
+    background-color: #7FE1A9;
+    border-radius: 0px 0px 15px 15px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.foot2{
+    background-color: #032B13;
+    color: white;
+    margin: auto;
+    padding: 0%;
+    width: 100%;
+    border-radius: 0%;
+    text-align: center;
+}
