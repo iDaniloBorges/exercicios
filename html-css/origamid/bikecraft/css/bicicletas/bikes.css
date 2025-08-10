@@ -1,0 +1,223 @@
+.nimbus-bg{
+  background: var(--cor-11);
+  padding: 40px 0px;
+}
+
+.nimbus > div > h3{
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+
+}
+
+.bicicletas-nimbus{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.bicicletas-opcoes div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.bicicletas-opcoes-nimbus{
+  grid-column: 1 / 3;
+  border-radius: 4px;
+  
+}
+
+.bicicletas-opcoes-magic{
+  grid-column: 1;
+  border-radius: 4px;
+}
+
+.bicicletas-opcoes-nebula{
+  grid-column: 2;
+  border-radius: 4px;
+}
+
+@media (max-width: 1000px){
+  .bicicletas-opcoes div, .bicicletas-opcoes a img{
+    grid-template-columns: 1fr;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .nimbus > div > h3{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 800px){
+  .bicicletas-nimbus{
+    grid-template-columns: 1fr;
+  }
+  .bicicletas-opcoes{
+    order: 2;
+  }
+  .bicicletas-opcoes div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 20px;
+  }
+}
+
+@media (max-width: 500px){
+  .bicicletas-opcoes div{
+    display: block;
+  }
+}
+
+.bicicletas-nimbus-informacoes{
+  display: grid;
+  grid-template-columns: .7fr 1fr;
+}
+
+.bicicletas-nimbus-informacoes a{
+  padding: 16px 24px;
+  text-align: center;
+  align-self: center;
+  white-space: nowrap;
+}
+
+.bicicletas-nimbus-descricao > p{
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.bicicletas-nimbus-informacoes{
+  gap: 20px;
+}
+
+.bicicletas-nimbus-informacoes ul li{
+  display: flex;
+  gap: 8px;
+  padding: 8px 0px;
+  
+}
+
+.bicicletas-nimbus-informacoes img, .bicicletas-nimbus-informacoes span{
+  background-color: var(--cor-12);
+}
+
+.bicicletas-nimbus-informacoes-2{
+  margin: 12px 0px;
+}
+
+.bicicletas-nimbus-informacoes-2 h3{
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.bicicletas-nimbus-informacoes-2 > p{
+  margin-bottom: 12px;
+}
+
+.bicicletas-nimbus-informacoes-2 ul{
+  background: var(--cor-12);
+  padding: 20px;
+  border-radius: 4px;
+  gap: 20px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+
+.bicicletas-nimbus-informacoes-2 ul div{
+  justify-content: center;
+}
+
+.bicicletas-nimbus-informacoes-2 ul h3{
+  padding-bottom: 8px;
+}
+
+.bicicletas-nimbus-informacoe-2 ul p{
+  font-weight: 100;
+}
+
+.bicicletas-nimbus-informacoes-3 ul{
+  background: var(--cor-12);
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 12px;
+}
+
+.bicicletas-nimbus-informacoes-3 ul li{
+  border-bottom: 1px solid var(--cor-11);
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  */
+.outros{
+  margin-top: 60px;
+  margin-bottom: 160px;
+}
+
+.outros h1{
+  padding: 40px 20px;
+}
+
+.outras.bicicletas{
+  grid-template-columns: 1fr 1fr;
+}
+
+/* MAIS INFORMAÇÕES */
+.mais-info-bg{
+  background: var(--cor-11);
+  box-shadow: inset 0px 80px var(--cor-0), inset 0 -80px var(--cor-12);
+ 
+}
+
+.mais-info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.mais-info img{
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
+  height: 110%;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mais-info-informacoes{
+  margin: auto;
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+}
+
+.mais-info-informacoes p{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 700px){
+  .mais-info-bg{
+    box-shadow: none;
+    box-shadow: inset 0px -40px var(--cor-12);
+  }
+  .mais-info{
+    grid-template-columns: 1fr;
+  }
+  .mais-info-informacoes{
+    order: 1;
+    grid-row: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .mais-info > div{
+    order: 2;
+    
+  }
+}

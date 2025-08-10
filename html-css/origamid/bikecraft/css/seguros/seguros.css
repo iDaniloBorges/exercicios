@@ -1,0 +1,130 @@
+.seguros-bg{
+  background: var(--cor-11);
+}
+
+.seguros{
+  padding: 60px 0px;
+}
+
+.seguros h1{
+  margin-bottom: 40px;
+  padding: 0px 20px;
+}
+
+.seguros h3{
+  padding: 0px 20px;
+}
+
+.planos{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 20px;
+}
+
+.prata{
+  max-height: fit-content;
+  align-self: center;
+}
+
+.prata, .ouro{
+  background: var(--cor-12);
+  border-radius: 4px;
+  padding: 40px 40px 40px 60px;
+}
+
+.seguros-preco{
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  position: relative;
+}
+
+.seguros-preco p{
+  position: relative;
+}
+
+.seguros-preco p::after{
+  content: "mensal";
+  font-size: .75rem;
+  font-weight: 100;
+  color: var(--cor-6);
+  position: absolute;
+  left: 50px;
+}
+
+.planos h2{
+  text-transform: uppercase;
+  padding-bottom: 28px;
+  font-weight: 600;
+}
+
+.planos ul{
+  margin-bottom: 30px;
+}
+
+.planos li{
+  font-weight:600;
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0;
+}
+
+.planos li::before{
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 9px;
+  left: -21px;
+  background-image: url("../../img/icones/lista.svg");
+  background-repeat: no-repeat;
+}
+
+@media(max-width: 800px){
+  .seguros h1{
+    padding-left: 20px;
+  }
+  .planos{
+    grid-template-columns: 1fr;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+  }
+}
+
+.vantagens-bg{
+  background: var(--cor-12);
+}
+
+.vantagens{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.vantagens h1{
+  margin-bottom: 40px;
+}
+
+.vantagens-lista{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+  gap: 30px 60px;
+}
+
+.vantagens-lista-item h3{
+  padding: 8px 0px;
+}
+
+/* @media(max-width: 1000px){
+  .vantagens-lista{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 600px){
+  .vantagens-lista{
+    grid-template-columns: 1fr;
+  }
+} */

@@ -1,0 +1,79 @@
+.depoimento{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: var(--cor-p1);
+  overflow: hidden;
+  height: 550px;
+  
+}
+
+.depoimento img{
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.conteudo {
+  align-content: end;
+  background: url("../../img/dec/bottom-right-p.svg") no-repeat
+  right 40px bottom 40px;
+  
+}
+
+.conteudo blockquote{
+  padding: 40px 40px 80px 200px;
+  position: relative;
+}
+
+.conteudo p{
+  font-family: 'Merriweather', sans-serif;
+  font-style: italic;
+  max-width: 32ch;
+  position: relative;
+  
+}
+
+.conteudo p::before{
+  content: '“';
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+  top: -20px;
+  left: -50px;
+}
+
+.conteudo p::after{
+  content: '”';
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+
+.conteudo span{
+  display: flex;
+  justify-content: start;
+  margin-left: 60px;
+  margin-bottom: 60px;
+  
+}
+
+@media(max-width:1200px){
+  .depoimento img{
+    max-height: 520px;
+  }
+}
+
+@media(max-width:1000px){
+  .depoimento{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .depoimento img{
+    max-height: 200px;
+  }
+  .conteudo blockquote{
+    padding: 40px 20px;
+    margin: auto;
+  }
+}
