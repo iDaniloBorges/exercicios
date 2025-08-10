@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/aula.css" />
+  </head>
+  <body>
+    <style>
+      /* body{
+            background: gray;
+        }
+        body.active{
+          background: red;
+        }
+        label{
+          display: block;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: bold;
+          margin-top: 1rem;
+          margin-bottom: .5rem;
+        }
+        form{
+          max-width: 400px;
+          margin: 0 auto;
+        }
+        input textarea{
+          width: 100%;
+          box-sizing: border-box;
+          padding: .5rem;
+          border: 2px solid #000;
+          font-size: 1rem;
+          margin-bottom: .5rem;
+        }
+        
+        textarea{
+          height: 150px;
+        }
+
+        .invalido{
+          border-color: red;
+        } */
+    </style>
+
+    <!-- <button class="iniciar">iniciar</button>
+<button class="pausar">pausar</button>
+<span class="tempo">Reset</span>
+
+
+<section>
+  <p>Lobo-cinzento (nome científico:Canis lupus) é uma espécie de mamífero canídeo do gênero Canis. É um sobrevivente da Era do Gelo, originário do Pleistoceno Superior, cerca de 300 mil anos atrás. É o maior membro remanescente selvagem da família canidae.</p>
+  <p>Os lobos-cinzentos são tipicamente predadores ápice nos ecossistemas que ocupam. Embora não sejam tão adaptáveis à presença humana como geralmente ocorre com as demais.</p>
+  <p>O peso e tamanho dos lobos variam muito em todo o mundo, tendendo a aumentar proporcionalmente com a latitude.</p>
+  <p>Os lobos são capazes de percorrer longas distâncias com uma velocidade média de 10 quilômetros por hora e são conhecidos por.</p>
+</section>
+
+   <section class="curso">
+    <h1>Web Design Completo</h1>
+    <p>Este curso é para quem deseja entrar ou já está no mercado de criação de websites.</p>
+    <span class="aulas">80</span>
+    <span class="horas">22</span>
+  </section>
+  <section class="curso">
+    <h1>WordPress Como CMS</h1>
+    <p>No curso de WordPress Como CMS, você aprende do zero como pegar qualquer site em HTML e torná-lo totalmente gerenciável com a plataforma do WordPress.</p>
+    <span class="aulas">46</span>
+    <span class="horas">9</span>
+  </section>
+  <section class="curso">
+    <h1>UI Design Avançado</h1>
+    <p>Este é um curso avançado de User Interface Design.</p>
+    <span class="aulas">55</span>
+    <span class="horas">15</span>
+  </section>
+
+  <ul>
+    <li>Texto 1</li>
+    <li>Texto 2</li>
+    <li>Texto 3</li>
+  </ul> -->
+
+    <!-- <form name="contato" id="contato">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" value="" required>
+    <span class="erro"></span>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+    <span class="erro"></span>
+    <label for="mensagem">Mensagem</label>
+    <textarea  name="mensagem" id="mensagem"></textarea>
+    <select name="cores" id="cores">
+      <option value="blue">azul</option>
+      <option value="red">vermelho</option>
+    </select> -->
+    <!-- <input type="color">
+    <input type="date">
+    <input type="number">
+    <input type="range">
+    <input type="password"> -->
+
+    <!-- <input type="checkbox" value="guitarra" id="guitarra">
+    <label for="radio" name="instrumentos" value="guitarra" id="identidade">Guitarra</label>
+    <input type="checkbox" value="baixo" id="baixo">
+    <label for="baixo">Baixo</label>
+
+
+  </form>
+  <span class="texto"></span> -->
+
+    <section class="button-creator">
+      <form class="controles" id="controles">
+        <label for="texto">texto</label>
+        <input type="text" name="texto" id="texto" />
+
+        <label for="color">color</label>
+        <input type="color" name="color" id="color" />
+
+        <label for="backgroundColor">background-color</label>
+        <input type="color" name="backgroundColor" id="backgroundColor" />
+
+        <label for="height">height</label>
+        <input type="range" name="height" id="height" min="0" max="600" />
+
+        <label for="width">width</label>
+        <input type="range" name="width" id="width" min="0" max="600" />
+
+        <label for="border">border</label>
+        <input type="text" name="border" id="border" />
+
+        <label for="borderRadius">border-radius</label>
+        <input
+          type="range"
+          name="borderRadius"
+          id="borderRadius"
+          min="0"
+          max="20"
+        />
+
+        <select name="fontFamily" id="fontFamily">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="monospace">monospace</option>
+        </select>
+        <label for="fontSize">font-size</label>
+        <input type="number" name="fontSize" id="fontSize" />
+      </form>
+
+      <section class="resultado">
+        <button class="btn">Clique</button>
+        <pre><code class="css" id="css">
+        <span></span>
+      </code></pre>
+      </section>
+    </section>
+
+    <!-- <script>
+    const contato = document.querySelector('#contato')
+    const texto = document.querySelector('.texto')
+    const dados= {}
+    // console.log(contato.elements.nome.value)
+    // console.log(document.forms[0]
+
+    function handleKeyUp(event){
+    //   const target = event.target
+
+    //   if(!target.checkValidity()){
+    //     target.classList.add('invalido')
+    //     contato.nome.setCustomValidity('O preenchimento do nome é necessário!')
+    //     target.nextElementSibling.innerText = target.validationMessage
+    //   }
+    //   console.log(event.target.checkValidity())
+    //   console.log(event.target.value)
+    //   texto.innerText = event.target.value
+    // }
+    // contato.addEventListener('change', handleKeyUp)
+
+    // if(event.target.checked){
+    //   console.log(event.target.value)
+    
+    // }
+    // document.body.style.background = event.target.value
+    
+      // console.log(event.target.name)
+      dados[event.target.name] = event.target.value 
+      console.log(dados)
+    }
+    contato.addEventListener('change', handleKeyUp)
+  </script> -->
+
+    <script src="/js/script_aula.js"></script>
+  </body>
+</html>
