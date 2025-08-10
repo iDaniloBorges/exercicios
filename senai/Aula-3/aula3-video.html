@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background: gray;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        h1{
+            text-align: center;
+            margin-top: 60px;
+        }
+        .videos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+            
+        }
+        video{
+            display: flex;
+            align-self: start;
+            margin-top: 60px;
+            height: 600px;
+            border-radius: 8px;
+        }
+    </style>
+
+    <h1>Manipulando Vídeos com HTML</h1>
+    <div class="videos">
+        <div>
+            <h2>Vídeo 1</h2>
+            <video controls src="video/piano-inside.mp4" type="video/mp4"></video>
+        </div>
+        <div>
+            <h2>Vídeo 2</h2>
+            <video controls src="video/piano-inside.mp4" type="video/mp4"></video>
+        </div>
+    </div>
+</body>
+</html>

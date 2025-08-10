@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            text-align: center;
+        }
+
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        iframe{
+            border-radius: 12px;
+        }
+        .opcoes{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        img{
+            width: 250px;
+        }
+        h1{
+            text-align: center;
+        }
+        
+        form{
+            max-width: 20rem;
+            margin: 0 auto;
+            display: grid;
+            gap: 10px;
+        }
+        input:focus{
+            background-color: rgba(42, 166, 224, 0.24);
+            color: rgb(24, 95, 202);
+            border: 2px solid rgb(24, 95, 202);
+            scale: 1.05;
+        }
+
+        button{
+            background: rgb(12, 25, 199);
+            padding: 4px 8px;
+            color: aliceblue;
+            border-radius: 4px;
+        }
+        
+        button:hover{
+            background: rgb(24, 95, 202);
+            scale: 1.05;
+        }
+        body{
+            margin-bottom: 60px;
+
+        }
+        main{
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+       .tabela{
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+       }
+       .titulo{
+        margin-bottom: 60px;
+       }
+       .podcast{
+        margin-bottom: 60px;
+       }
+       label, input, textarea{
+        text-align: start;
+       }
+       caption{
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+       th, td{
+        padding: 5px 10px;
+       }
+    </style>
+    <header class="container">
+        <h1 class="titulo">MarketPlace</h1>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/i1Mu8D3awic?si=Q90pXqHU_dDsQC2y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </header>
+    <main class="container">
+        <section class="opcoes">
+            <section>
+                <img src="img/iphone16-yellow.jpg" alt="">
+            </section>
+            <section>
+                <img src="img/iphone16-green.jpg" alt="">
+            </section>
+            <section>
+                <img src="img/iphone16-black.jpg" alt="">
+            </section>
+            <section>
+                <img src="img/iphone16-blue.jpg" alt="">
+            </section>
+            <section>
+                <img src="img/iphone16-pink.jpg" alt="">
+            </section>
+        </section>
+        <section class="tabela">
+            <table border="2">
+                <caption>Lista</caption>
+                <tr>
+                    <th>Produto</th>
+                    <th>Yellow</th>
+                    <th>Green</th>
+                    <th>Black</th>
+                    <th>Blue</th>
+                    <th>Pink</th>
+                </tr>
+                <tr>
+                    <td>Iphone 16</td>
+                    <td>R$3.990,00</td>
+                    <td>R$3.490,00</td>
+                    <td>R$3.890,00</td>
+                    <td>R$3.590,00</td>
+                    <td>R$3.290,00</td>
+
+                </tr>
+            
+            </table>
+        </section>
+        <section class="podcast">
+            <h2>Podcast</h2>
+            <audio controls src="audio/moonlight-beethoven.mp3" type="audio/mp3"></audio>
+        </section>
+        <section><h1>FORMULÁRIO</h1>
+            <form action="">
+                <label for="nome">Nome:</label>
+                <input type="text" class="nome" id="nome" name="nome" placeholder="Nome completo">
+        
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="seuemail@email.com">
+        
+                <label for="idade">Idade:</label>
+                <input type="number">
+        
+                <label for="">Gênero: </br>
+                    <select name="genero" id="">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </label>
+                
+                <!-- <label for="">
+                    <input type="checkbox" name="" id="">
+                    Masculino
+                </label>
+                <label for="">
+                    <input type="checkbox" name="" id="">
+                    Feminino
+                </label> -->
+        
+                <label for="msg">Mensagem</label>
+                <textarea name="msg" id="msg" placeholder="Escreva sua Mensagem" rows="10"></textarea>
+        
+                <h2>Interesses</h2>
+                <label for="tecnologia">
+                    <input type="checkbox">
+                    Tecnologia
+                </label>
+                <label for="esportes">
+                    <input type="checkbox">
+                    Esportes
+                </label>
+                <label for="culinaria">
+                    <input type="checkbox">
+                    Culinária
+                </label>
+        
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

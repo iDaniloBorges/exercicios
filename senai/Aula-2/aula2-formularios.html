@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.493);
+            
+        }
+        h1{
+            text-align: center;
+        }
+        form{
+            max-width: 20rem;
+            margin: 0 auto;
+            display: grid;
+            gap: 10px;
+        }
+        input:focus{
+            background-color: rgba(42, 166, 224, 0.24);
+            color: rgb(24, 95, 202);
+            border: 2px solid rgb(24, 95, 202);
+            scale: 1.05;
+        }
+
+        button{
+            background: rgb(12, 25, 199);
+            padding: 4px 8px;
+            color: aliceblue;
+            border-radius: 4px;
+        }
+        
+        button:hover{
+            background: rgb(24, 95, 202);
+            scale: 1.05;
+        }
+    </style>
+
+    <h1>FORMULÁRIO</h1>
+    <form action="">
+        <label for="nome">Nome:</label>
+        <input type="text" class="nome" id="nome" name="nome" placeholder="Nome completo">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="seuemail@email.com">
+
+        <label for="idade">Idade:</label>
+        <input type="number">
+
+        <label for="">Gênero: </br>
+            <select name="genero" id="">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outros">Outros</option>
+            </select>
+        </label>
+        
+        <!-- <label for="">
+            <input type="checkbox" name="" id="">
+            Masculino
+        </label>
+        <label for="">
+            <input type="checkbox" name="" id="">
+            Feminino
+        </label> -->
+
+        <label for="msg">Mensagem</label>
+        <textarea name="msg" id="msg" placeholder="Escreva sua Mensagem" rows="10"></textarea>
+
+        <h2>Interesses</h2>
+        <label for="tecnologia">
+            <input type="checkbox">
+            Tecnologia
+        </label>
+        <label for="esportes">
+            <input type="checkbox">
+            Esportes
+        </label>
+        <label for="culinaria">
+            <input type="checkbox">
+            Culinária
+        </label>
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="">
+    <style>
+        body{
+            background: whitesmoke;
+        }
+        h1{
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            font-family: serif;
+        }
+        .obras{
+            max-width: 1000px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+        div{
+            text-align: center;
+
+        }
+        img{
+            border-radius: 8px;
+        }
+        #mona-lisa, #o-grito{
+            /* width: 500px; */
+            height: 700px;
+            border-radius: 8px;
+            
+        }
+        #gogh{
+            width: 1000px;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+    <h1>Galeria imagens</h1>
+    <div class="obras">
+        <div id="mona-lisa">
+            <img src="img/mona-lisa.jpg" alt="Piano_público"  class="">
+        </div>
+        <div id="o-grito">
+            <img src="img/o-grito.jpg" alt="Piano_público" class="">
+        </div>
+        <div id="gogh">
+            <img src="img/noite-estrelada.png" alt="Piano_público" class="">
+        </div>
+    </div>
+</body>
+</html>
