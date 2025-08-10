@@ -1,0 +1,23 @@
+h1 {
+  font-weight: bold;
+  margin-right: 20px;
+}
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+input {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.349) ;
+}
+
+button{
+    padding: 10px;
+    border-radius: 20px;
+}

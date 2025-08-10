@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        background-color: #444;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        margin: 0;
+      }
+
+      .semaforo {
+        width: 150px;
+        background: #444;
+        padding: 20px;
+        border-radius: 30px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+      }
+      .semaforo:hover {
+        background: gray;
+      }
+
+      .luz {
+        width: 80px;
+        height: 80px;
+        background: #444;
+        padding: 30px;
+        border-radius: 50%;
+      }
+    </style>
+    <div
+      class="semaforo"
+      onclick="
+        if(document.getElementById('vermelho').style.background == 'red'){
+            document.getElementById('vermelho').style.background = '#444'
+            document.getElementById('amarelo').style.background = 'yellow'
+        
+        } else if (document.getElementById('amarelo').style.background == 'yellow'){
+            document.getElementById('amarelo').style.background = '#444'
+            document.getElementById('verde').style.background = 'green'
+
+        } else {
+            document.getElementById('verde').style.background = '#444'
+            document.getElementById('vermelho').style.background = 'red'
+        }
+        "
+    >
+      CLIQUE AQUI
+    </div>
+
+    <div id="vermelho" class="luz"></div>
+    <div id="amarelo" class="luz"></div>
+    <div id="verde" class="luz"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

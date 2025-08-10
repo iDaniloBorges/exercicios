@@ -1,0 +1,104 @@
+/* ECOMMERCE */
+:root{
+    --cor1: #1B2727;
+    --cor2: #3C5148;
+    --cor3: #6B8E4E;
+    --cor4: #B2C5B2;
+    --cor5: #D5DDDF;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body{
+    background: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor4));
+    background-repeat: no-repeat;
+}
+header{
+    background: var(--cor1);
+}
+header div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 30px 15px;
+    align-items: center;
+}
+#titulo{
+    font-size: 1.6rem;
+}
+
+nav ul{
+    display: flex;
+    gap: 50px;
+    /* margin-top: 40px; */
+}
+
+nav ul li{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+a:hover{
+    color: var(--cor4);
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 15px;
+    margin-top: 60px;
+    gap: 50px;
+}
+
+.seletores{
+    background: var(--cor4);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.seletores > div{
+    margin-bottom: 20px;
+}
+
+.seletores h2{
+    color: var(--cor1);
+}
+
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+img{
+    max-height: 250px;
+    width: 350px;
+    border-radius: 16px;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: .5s ease-in-out;
+}
+
+img:hover{
+    scale: 1.02;
+}
+
+
+footer{
+    margin-top: 200px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <style>
+        body{
+            /* background: gray; */
+        }
+    </style>
+    <!-- cobeçalho -->
+    <header>
+      <table>
+        <tr>
+          <td>
+            <h1>YouTube</h1>
+          </td>
+          <td>
+            <form>
+              <input type="text" placeholder="Pesquisar" size="60" />
+              <button type="submit">Pesquisar</button>
+            </form>
+          </td>
+          <td width="15%" align="right">
+            <button>Login</button>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <!-- conteudo principal -->
+    <main>
+      <table width="100%">
+        <tr>
+          <td width="15%" valign="top">
+            <nav>
+              <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="#">Inscrições</a></li>
+                <hr />
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="#">Vídeo</a></li>
+                <li><a href="#">Ver mais</a></li>
+                <li><a href="#">Vídeos marcados</a></li>
+              </ul>
+            </nav>
+          </td>
+
+          <!-- conteudo dos vídeos -->
+
+          <td width="85%">
+            <div>
+              <!-- <iframe src="https://www.youtube.com/watch?v=DtYrxTp_1fA" frameborder="0" width="800" height="450" allowfullscreen>  -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DtYrxTp_1fA?si=mzTQDKdcruvzFL1K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+              </iframe>
+
+              <h3>TÍTULO DO VÍDEO</h3>
+              <p>1.2300 visualizações - 01 de Agosto de 2025</p>
+              <hr />
+              <table width="100%">
+                <tr>
+                  <td width="10%">
+                    <img src="./assets/img/YouTube_23392.png" align="center" height="50" width="50" alt="Canal" />
+                  </td>
+
+                  <td width="60%">
+                    <h3>NOME DO CANAL</h3>
+                    <p>1,5 milhoes de inscritos</p>
+                  </td>
+
+                  <td width="10%">
+                    <button type="submit">Inscreva-se</button>
+                  </td>
+                </tr>
+              </table>
+              <div>
+                <button>Gostei</button>
+                <button>Não Gostei</button>
+                <button>Compartilhar</button>
+                <button>Salvar</button>
+              </div>
+            </div>
+            <div>
+              <!-- seção compartilhar -->
+              <h3>Comentários (1.234)</h3>
+              <form action="">
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Adicione um comentário"
+                  rows="2"
+                  cols="80"
+                ></textarea>
+                <br />
+                <button type="submit">Comentar</button>
+              </form>
+              <hr />
+              <div>
+                <p><strong>Usuário 1</strong> - Isso foi útil.</p>
+                <p><strong>Usuário 2</strong> - Gostei bastante.</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </main>
+    <footer align="center">
+        <hr>
+        <p>&copy; 2025 YouTube Clone (HTML)</p>
+    </footer>
+
+    <script>
+        document.write=('Hello')
+    </script>
+  </body>
+</html>

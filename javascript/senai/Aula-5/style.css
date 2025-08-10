@@ -1,0 +1,64 @@
+:root{
+    /* Font */
+    --fonte-primaria: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --tamanho-titulos: 1.5rem; 
+    --tamanho-subtitulos: 1.2rem; 
+    --tamanho-texto: 1rem; 
+
+    /* Cores */
+    --c1: #1B2727;
+    --c2: #3C5148;
+    --c3: #6B8E4E;
+    --c4: #B2C5B2;
+    --c5: #D5DDDF;
+
+    /* BOX MODEL */
+    --largura: 1200px;
+    --centralizacao: 0 auto;
+    --espacamento: 10px 20px;
+    --bordas: 4px
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body{
+    font-family: var(--fonte-primaria);
+    background:radial-gradient(circle, var(--c3), var(--c1)), var(--c2);
+    background-repeat: no-repeat;
+    padding: var(--espacamento);
+    margin: 0;
+    height: 100vh;
+}
+
+p{
+    max-width: var(--largura);
+    margin: var(--centralizacao);
+    color: var(--c4);
+    padding: var(--espacamento);
+}
+
+button{
+    background-color: var(--c5);
+    color: var(--c1);
+    padding: var(--espacamento);
+    border-radius: var(--bordas);
+    font-weight: bold;
+    font-family: var(--fonte-primaria);
+    transition: .2s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--c3);
+    color: var(--c5);
+
+}

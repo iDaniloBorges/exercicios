@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background: gray;
+        text-align: center;
+      }
+      label {
+        font-size: 1.5rem;
+        display: block;
+      }
+      input {
+        line-height: 1.5rem;
+        width: 400px;
+      }
+      .botoes {
+        margin-top: 20px;
+      }
+      button {
+        border: none;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+      #red {
+        background: red;
+      }
+      #red:hover {
+        background: rgba(255, 0, 0, 0.541);
+      }
+      #blue {
+        background: blue;
+      }
+      #blue:hover {
+        background: rgba(0, 0, 255, 0.5);
+      }
+      #yellow {
+        background: yellow;
+      }
+      #yellow:hover {
+        background: rgba(255, 255, 0, 0.473);
+      }
+      #green {
+        background: green;
+      }
+      #green:hover {
+        background: rgba(0, 128, 0, 0.438);
+      }
+      #pink {
+        background: rgb(202, 15, 140);
+      }
+      #pink:hover {
+        background: rgba(202, 15, 140, 0.438);
+      }
+      #limpar {
+        background: white;
+        color: black;
+      }
+      #limpar:hover {
+        background: black;
+        color: white;
+      }
+      #resposta {
+        margin-top: 60px;
+        font-size: 2rem;
+      }
+    </style>
+    <h1 class="titulo">EDITOR DE MENSAGEM</h1>
+    <label for="mensagem">Mensagem</label>
+    <input type="text" id="msg" />
+
+    <div class="botoes">
+      <button id="red" class="botoes">Red</button>
+      <button id="blue" class="botoes">Blue</button>
+      <button id="yellow" class="botoes">Yellow</button>
+      <button id="green" class="botoes">Green</button>
+      <button id="pink" class="botoes">Pink</button>
+    </div>
+
+    <button id="registrar">Registrar</button>
+    <button id="limpar">Limpar</button>
+
+    <div id="resposta"></div>
+
+    <script>
+      const titulo = document.querySelector(".titulo");
+      const msg = document.getElementById("msg");
+      const red = document.querySelector("#red");
+      const blue = document.querySelector("#blue");
+      const yellow = document.querySelector("#yellow");
+      const green = document.querySelector("#green");
+      const pink = document.querySelector("#pink");
+      const limpar = document.getElementById("limpar");
+      const resposta = document.getElementById("resposta");
+      const registrar = document.getElementById("registrar");
+
+      red.addEventListener("click", () => {
+        msg.style.color = "red";
+        titulo.style.color = "red";
+        resposta.style.color = "red";
+      });
+      blue.addEventListener("click", () => {
+        msg.style.color = "blue";
+        titulo.style.color = "blue";
+        resposta.style.color = "blue";
+      });
+      yellow.addEventListener("click", () => {
+        msg.style.color = "yellow";
+        titulo.style.color = "yellow";
+        resposta.style.color = "yellow";
+      });
+      green.addEventListener("click", () => {
+        msg.style.color = "green";
+        titulo.style.color = "green";
+        resposta.style.color = "green";
+      });
+      pink.addEventListener("click", () => {
+        msg.style.color = "rgb(202, 15, 140)";
+        titulo.style.color = "rgb(202, 15, 140)";
+        resposta.style.color = "rgb(202, 15, 140)";
+      });
+      limpar.addEventListener("click", () => {
+        msg.value = "";
+        resposta.innerText = "";
+      });
+      registrar.addEventListener("click", () => {
+        resposta.innerHTML = msg.value;
+      });
+    </script>
+  </body>
+</html>

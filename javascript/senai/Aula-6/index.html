@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .btn{
+            color: purple;
+            font-size: 2rem;
+        }
+    </style>
+
+    <div>Hello, world!</div>
+
+    <!-- Interação com ambiente de teste -->
+    <h1>Métodos básicos de saída</h1>
+    <!-- Interação com as caixas de alerta da página -->
+    <button onclick="console.log('Mensagem no console')">Console</button>
+    <button onclick="alert('ALERTA')">Alert</button>
+    <!-- Interação com o corpo da página -->
+    <button class="write" onclick="document.write('HELLO, WORLD!')">Dcoument.write</button>
+    <button onclick="document.getElementById('demo').innerHTML=('Funciona!!!')">Document.inner</button>
+    
+    <p id="demo">Texto base</p>
+
+    
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
