@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background: gray;
+      }
+      h1 {
+        max-width: 500px;
+        margin: 50px auto;
+      }
+      div {
+        display: grid;
+        width: 500px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        align-items: center;
+        padding: 20px;
+      }
+      .tipos_mesa {
+        /* display: grid;
+        grid-template-columns: 1fr 10fr; */
+      }
+      .tipos_mesa_titulo {
+        grid-column-start: 0;
+        grid-column-end: 3;
+        column-span: 2;
+      }
+      .checkbox {
+        align-items: center;
+        height: 20px;
+        width: 20px;
+      }
+    </style>
+
+    <h1>Reservas</h1>
+
+    <div id="cliente1">
+      <label for="">Cliente 1</label>
+      <input type="text" id="nome1" />
+      <h3 for="" id="tipos_mesa_titulo">Escolha o tipo de mesa</h3>
+      <div class="tipos_mesa">
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa1"
+            value="padrao"
+          />
+          Padrão Mesa comum (4 pessoas) R$ 50 por pessoa</label
+        >
+        <label for="">
+          <input class="checkbox" type="radio" name="typeMesa1" value="vip" />
+          VIP Mesa espaçosa (6 pessoas) R$ 80 por pessoa</label
+        >
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa1"
+            value="vistaExterna"
+          />
+          Varanda Vista externa (4 pessoas) R$ 100 por pessoa</label
+        >
+      </div>
+    </div>
+
+    <div id="cliente2">
+      <label for="nome">Cliente 2</label>
+      <input type="text" id="nome2" />
+      <h3 for="" id="tipos_mesa_titulo">Escolha o tipo de mesa</h3>
+      <div class="tipos_mesa">
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa2"
+            value="padrao"
+          />
+          Padrão Mesa comum (4 pessoas) R$ 50 por pessoa</label
+        >
+
+        <label for="">
+          <input class="checkbox" type="radio" name="typeMesa2" value="vip" />
+          VIP Mesa espaçosa (6 pessoas) R$ 80 por pessoa</label
+        >
+
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa2"
+            value="vistaExterna"
+          />
+          Varanda Vista externa (4 pessoas) R$ 100 por pessoa</label
+        >
+      </div>
+    </div>
+    <div id="cliente3">
+      <label for="">Cliente 3</label>
+      <input type="text" id="nome3" />
+      <h3 for="" id="tipos_mesa_titulo">Escolha o tipo de mesa</h3>
+      <div class="tipos_mesa">
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa3"
+            value="padrao"
+          />
+          Padrão Mesa comum (4 pessoas) R$ 50 por pessoa</label
+        >
+
+        <label for="">
+          <input class="checkbox" type="radio" name="typeMesa3" value="vip" />
+          VIP Mesa espaçosa (6 pessoas) R$ 80 por pessoa</label
+        >
+
+        <label for="">
+          <input
+            class="checkbox"
+            type="radio"
+            name="typeMesa3"
+            value="vistaExterna"
+          />
+          Varanda Vista externa (4 pessoas) R$ 100 por pessoa</label
+        >
+      </div>
+    </div>
+
+    <div>
+      <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="retorno">
+      <h3>Cliente 1</h3>
+      <span id="c1"></span>
+      <h3>Cliente 2</h3>
+      <span id="c2"></span>
+      <h3>Cliente 3</h3>
+      <span id="c3"></span>
+      <h3>Total</h3>
+      <span id="total"></span>
+    </div>
+
+    <script src="reserva_restaurante_front.js" defer></script>
+    <script src="reserva_restaurante.js" defer></script>
+  </body>
+</html>
