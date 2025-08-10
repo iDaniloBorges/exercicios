@@ -1,0 +1,32 @@
+/* html{
+  cursor: none;
+}
+
+.circulo{
+  width: 16px;
+  height: 16px;
+  background-color: #999;
+  border-radius: 50%;
+  position: absolute;
+}
+ */
+
+ img{
+  max-width: 100%;
+  display: block;
+ }
+
+ #galeria{
+  max-width: 600px;
+  margin: 0 auto;
+ }
+
+ #galeria ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+ }

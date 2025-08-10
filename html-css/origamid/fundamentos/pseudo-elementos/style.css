@@ -1,0 +1,53 @@
+h1{
+  position: relative;
+}
+
+/*  Adiciona conteúdo antes do marcador */
+h1::before{
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: #caf;
+  
+}
+
+/*  Adiciona conteúdo depois do marcador  */
+h1::after{
+    content: "";
+}
+
+
+/*  Personalizando listas */
+ul{
+  list-style: none;
+}
+
+li{
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+li::before{
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(#caf, #fff);
+  border: 2px solid #caf;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+/*  Modifica apenas a primeira linha  */
+p::first-line {
+  font-weight: bold;
+}
+
+/*  Modifica apenas a primeira letra  */
+p::first-letter {
+  font-size: 2rem;
+}
+

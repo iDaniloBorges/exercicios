@@ -1,0 +1,50 @@
+body{
+  font-size: 2rem;
+}
+
+#produtos{
+  color: lightgreen;
+}
+
+.titulo{
+  color: tomato;
+  padding: 10px;
+}
+
+html body section h2{
+  color: aqua;
+}
+
+h2{
+  color: black !important;
+}
+
+/* Espaço para salvar fontes, tamanhos, cores e etc */
+:root{
+  --cor-primaria: #84e;
+  --cor-secundaria: white ;
+  --borda: 4px solid blue;
+  --fonte-grande: 8rem;
+}
+
+/* Espaço para salvar fontes, tamanhos, cores e etc., caso o tema do navegador do usuário seja escuro*/
+@media (prefers-color-scheme: dark){
+  :root{
+    --cor-primaria: white  ;
+    --cor-secundaria: #84e;
+    --borda: 4px solid blue;
+    --fonte-grande: 8rem;
+  }
+}
+
+html{
+  background: var(--cor-secundaria);
+}
+
+p{
+  --roxo: #222;
+  color: var(--cor-primaria);
+  border: var(--cor-primaria);
+  font-size: calc(var(--fonte-grande)) /2;
+  margin-top: var(--fonte-grande);
+}

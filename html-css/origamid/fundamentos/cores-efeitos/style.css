@@ -1,0 +1,64 @@
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  background-color: lightblue;
+  padding: 10px 20px;
+  display: blockc;
+}
+
+/*
+h1{
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-indent: 5rem;
+  text-align: center;
+  text-shadow: 5px 5px 10px gray;
+  letter-spacing: .05rem;
+}
+*/
+.bike{
+  height: 600px;
+  background: lightblue;
+  background-image: url("../basico/Posicionamento/Ex1/img/bicicleta.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  /*background: lightblue url("../basico/Posicionamento/Ex1/img/bicicleta.jpg") no repeat cover center top;*/
+  display: flex;
+}
+
+h1{
+  margin: auto;
+  background: white;
+  padding: 1rem 2rem;
+}
+
+.pattern{
+  height: 300px;
+  background-color: lightcoral;
+}
+
+
+.linear{
+  height: 200px;
+  background-image: linear-gradient( 45deg, lightblue 0%, lightcoral 10%, blue 20%);
+
+}
+
+.radial{
+  height: 200px;
+  background-image: radial-gradient(circle, lightblue, lightcoral, orange);
+}

@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid{
+    background-color: gray;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+    
+}
+
+    p{
+        border: 1px solid black;
+        margin: 5px;
+    }
+
+.grid-item0{
+    background-color: aqua;
+    grid-column: 2 / 4;  
+    text-align: center;
+    justify-self: end;
+    height: 50px;
+    justify-self: center;
+}
+
+.grid-item1{
+    background-color: blueviolet;
+    grid-column: 1 / 5;
+    justify-self: center;
+}
+
+.grid-item2{
+    background-color: brown;
+    justify-self: stretch;
+}
+
+.flex{
+
+}

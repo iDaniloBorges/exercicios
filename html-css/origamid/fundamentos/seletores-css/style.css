@@ -1,0 +1,25 @@
+/*  Aplicar a todos elementos de lista  */
+.lista-1 li{
+  background: #caf;
+}
+
+/*  Aplicar apenas ao primeiro elemento da lista  */
+.lista-1 li:first-child{
+  background: #adf;
+}
+
+/*  Aplicar apenas ao último elemento da lista  */
+.lista-1 li:last-child{
+  background: #CFA;
+}
+
+/*  Aplicar apenas ao elemento informado da lista 
+    Posição específica, even, odd, 3n (de 3 em 3) */
+.lista-1 li:nth-child(3){
+  background: #147;
+}
+
+/*  Não aplicar aos elementos informados  */
+.lista-3 li:not(:first-child, :last-child, .terceiro){
+  background: #731;
+}
