@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: gray;
+
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Descobrindo se tu é BR</h1>
+    <input type="text" name="Nacionalidade" id="nacionalidade">
+    <input type="button" value="Verificar" onclick="nacc()">
+    <div id="res"></div>
+
+    <script>
+        function nacc(){
+        var nac = document.querySelector('input#nacionalidade').value
+        
+        if(nac==='Brasileiro'){
+            res.innerText='Você é Brasileiro'
+        }else{
+            res.innerText= `Você não é Brasileiro, você é ${nac}.`
+        }
+        }
+
+
+    </script>
+    
+</body>
+</html>
