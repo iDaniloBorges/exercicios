@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="m-8 dark:bg-neutral-700 grid gap-4">
+    <div class="bg-neutral-950 text-white py-4 px-8">
+      <div class="grid gap-4">
+        <h2
+          class="my-4 block before:bg-amber-300 before:w-1 before:h-2 uppercase"
+        >
+          bikecraft ou seguro?
+        </h2>
+        <div>
+          <h2 class="uppercase font-bold tracking-wide">Escolha a sua</h2>
+          <div>
+            <input
+              class="peer"
+              type="radio"
+              name="produto"
+              value="nimbus"
+              id="nimbus"
+            />
+            <label for="nimbus" class="capitalize"
+              >nimbus stark <span>R$ 4999</span></label
+            >
+            <ul class="hidden peer-checked:block">
+              <li>sdfsdf</li>
+              <li>sdfsdgsg</li>
+              <li>ytjtgkgtk</li>
+              <li>tykghk</li>
+            </ul>
+          </div>
+          <div>
+            <input
+              class="peer"
+              type="radio"
+              name="produto"
+              value="magic"
+              id="magic"
+            />
+            <label for="magic" class="capitalize"
+              >magic stark <span>R$ 4999</span></label
+            >
+            <ul class="hidden peer-checked:block">
+              <li>sdfsdf</li>
+              <li>sdfsdgsg</li>
+              <li>ytjtgkgtk</li>
+              <li>tykghk</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="m-8">
+    <div class="flex gap-4">
+      <div class="size-40 shadow-sm"></div>
+      <div class="size-40 shadow-md"></div>
+      <div class="size-40 shadow-lg shadow-purple-500"></div>
+      <div class="size-40 shadow-[inset_10px_10px_5px_5px_black] blur-md"></div>
+    </div>
+
+    <input
+      type="text"
+      class="bg-gray-200 py-2 px-4 mt-8 rounded-md border-gray-200 focus:border-yellow-500 focus:outline-none focus:ring-2 ring-yellow-500"
+    />
+
+    <div class="m-8 translate">
+      <h1>TRANSLATE</h1>
+      <div class="size-20 absolute bg-blue-500"></div>
+      <div class="size-20 absolute bg-yellow-500 translate-y-8"></div>
+    </div>
+    <div class="my-40 mx-8 translate">
+      <h1 class="my-8">ROTATE</h1>
+      <div class="size-20 absolute bg-blue-500"></div>
+      <div class="size-20 absolute bg-yellow-500 rotate-45"></div>
+    </div>
+    <div class="my-40 mx-8 translate">
+      <h1 class="my-8">SCALE</h1>
+      <div class="size-20 absolute bg-blue-500"></div>
+      <div
+        class="size-20 absolute bg-yellow-500 scale-50 scale-x-110 origin-left rotate-20"
+      ></div>
+      <div
+        class="size-20 absolute bg-red-500 scale-50 scale-x-110 rotate-40"
+      ></div>
+    </div>
+  </body>
+</html>

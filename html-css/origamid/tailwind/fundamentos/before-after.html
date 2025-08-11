@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="m-8">
+    <button
+      class="bg-blue-400 hover:bg-blue-200 active:bg-blue-300 text-blue-950 border-2 border-blue-200 rounded-md py-2 px-4 after:size-6 after: relative after:absolute after:bg-amber-50 after:rounded-full after:border-4 after:border-blue-900 after:border-r-transparent after:-top-2 after:-right-2"
+    >
+      Comprar Produto
+    </button>
+
+    <div class="m-6"></div>
+
+    <button
+      class="bg-blue-400 hover:bg-blue-200 active:bg-blue-300 text-blue-950 border-2 border-blue-200 rounded-md py-2 px-4 relative"
+    >
+      Comprar Produto
+      <span
+        class="size-6 absolute bg-amber-50 rounded-full border-4 border-blue-900 border-r-transparent -top-2 -right-2"
+      ></span>
+    </button>
+    <input
+      type="text"
+      class="border-2 rounded-md border-gray-400 p-2 placeholder:text-red-500"
+      placeholder="Email"
+    />
+    <ul class="list-disc marker:text-green-500">
+      <li>Produto 1</li>
+      <li>Produto 2</li>
+      <li>Produto 3</li>
+    </ul>
+  </body>
+</html>

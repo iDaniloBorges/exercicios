@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="m-8">
+    <a href="#principal" class="sr-only focus:not-sr-only">Pular para o conteúdo</a>
+    <button
+      class="rounded-ss-2xl bg-gray-300 border-2 border-gray-800 px-4 py-2 mb-4"
+    >
+      Comprar Produto
+    </button>
+    <p class="bg-amber-300 max-w-screen-">My text</p>
+    <div class="size-8 rounded-full bg-slate-300"></div>
+
+    <!-- DISPLAY -->
+    <a href="/" class="bg-blue-200 py-2 px-4 inline-block">Contato</a>
+    <a href="/" class="bg-blue-200 py-2 px-4 inline">Sobre</a>
+    <p class="bg-purple-200 py-2 px-4">Saiba Mais</p>
+
+    <nav class="mb-[1000px]">
+      <button id="menuButton" class="bg-purple-300 px-4 py-2">Menu</button>
+      <ul id="menu" class="hidden">
+        <li>Produtos</li>
+        <li>Sobre</li>
+        <li>Contato</li>
+      </ul>
+    </nav>
+    <p id="principal">Meu conteudo</p>
+    <script>
+      menuButton?.addEventListener("click", () => {
+        menu?.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

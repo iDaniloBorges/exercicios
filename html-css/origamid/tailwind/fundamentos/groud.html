@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="m-8 max-md:m-2 dark:bg-neutral-700 btn-azul container">
+    <div class="bg-lime-950 text-center">
+      <p class="text-lime-100 animate-delay-2 text-sombra p-8 uppercase tracking-widest text-sm">
+        conecte-se com a natureza
+      </p>
+      <h1
+        class="capitalize text-6xl font-serif text-origamid-950 p-8 mx-auto max-w-3xl max-md:text-4xl max-md:p-4"
+      >
+        cada som, cada momento, uma nova descoberta
+      </h1>
+      <div
+        class="grid grid-cols-2 max-w-[800px] mx-auto max-md:grid-cols-1 group"
+      >
+        <div
+          class="m-8 max-md:m-4 p-8 bg-lime-900 rounded-3xl text-left gap-4 max-md:gap-2 group-hover:bg-neutral-500"
+        >
+          <h2 class="capitalize text-lime-300 font-serif text-2xl">lua nova</h2>
+          <div class="max-md:flex max-md:items-end max-md:gap-2">
+            <p class="text-5xl text-amber-50 font-serif max-md:text-3xl">23</p>
+            <p class="capitalize text-amber-50 text-2xl">março 2049</p>
+          </div>
+          <p class="text-lime-300 py-4 text-[20px] text-balance">
+            Melhor período para observação astronômica. O Céu estará claro e as
+            estrelas visíveis.
+          </p>
+          <button
+            class="lg:btn"
+          >
+            Reservar 23/03
+          </button>
+        </div>
+        <div
+          class="m-8 max-md:m-4 p-8 bg-lime-900 rounded-3xl text-left gap-4 max-md:gap-2 group-hover:bg-amber-800"
+        >
+          <h2 class="capitalize text-lime-300 font-serif text-2xl">
+            aurora boreal
+          </h2>
+          <div class="max-md:flex max-md:items-end max-md:gap-2">
+            <p class="text-5xl text-amber-50 font-serif max-md:text-3xl">15</p>
+            <p class="capitalize text-amber-50 text-2xl">abril 2049</p>
+          </div>
+          <p class="text-lime-300 py-4 text-[20px] text-balance">
+            Melhor período para observação da Aurora Boreal, o Céu estará
+            iluminado pelas estrelas.
+          </p>
+          <button
+            class="btn"
+          >
+            Reservar 15/04
+          </button>
+        </div>
+      </div>
+    </div>
+    <form action="" class="m-8 flex gap-4">
+      <div>
+        <input
+          type="text"
+          class="border-2 border-gray-200 p-2 bg-amber-50 peer/cpf"
+          placeholder="CPF"
+        />
+        <p class="hidden peer-focus/cpf:block">Use pontos e hífen</p>
+      </div>
+
+      <div>
+        <input
+          type="text"
+          class="border-2 border-gray-200 p-2 bg-amber-50 peer/email"
+          placeholder="E-MAIL"
+        />
+        <p class="hidden peer-focus/email:block">Use o email do trabalho</p>
+      </div>
+    </form>
+
+    <div class="flex gap-8 mb-4 p-4">
+      <div
+        class="has-[.recomendado]:bg-gray-800 bg-gray-400 p-4 rounded-md size-40 relative"
+      >
+        <h2 class="text-white">Plano Ouro</h2>
+        <div
+          class="recomendado absolute bg-green-500 text-green-950 p-1 rounded-md -top-4 -right-4"
+        >
+          Recomendado
+        </div>
+      </div>
+      <div
+        class="has-[.recomendado]:bg-gray-800 bg-gray-400 p-4 rounded-md size-40 relative"
+      >
+        <h2 class="text-white">Plano Prata</h2>
+      </div>
+    </div>
+  </body>
+</html>
