@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Compras</h3>
+
+    <script>
+      let carrinho = [];
+      let loop_ = true;
+
+      while (loop_) {
+        let op = parseInt(
+          prompt("1 - add | 2 - Remover | 3 - lista  | 4 -  Sair")
+        );
+
+        if (op === 1) {
+          let produto = prompt("Digite o nome do produto");
+          if (produto) {
+            carrinho.push(produto);
+            alert("produto adicionado");
+          }
+        } else if (op === 2) {
+          if (carrinho.length === 0) {
+            alert("Lista Vazia");
+          } else {
+            let nome_prod = "itens: ";
+            for (i = 0; i < carrinho.length; i++) {
+              nome_prod += `${i + 1} - ${carrinho[i]}`;
+            }
+
+            let i =
+              parseInt(prompt(nome_prod + "Remova com o valor do indice: ")) -
+              1;
+            if (i >= 0 && i < carrinho.length) {
+              let remover = carrinho.splice(i, 1);
+              alert("Valor removido!");
+            } else {
+              alert("Indice invalido!");
+            }
+          }
+        } else if (op === 3) {
+          if (carrinho.length === 0) {
+            alert("Carrinho vazio");
+          } else {
+            let nome_prod = "Lista: ";
+            for (let i = 0; i < carrinho.length; i++) {
+              nome_prod += `${carrinho[i]}`;
+            }
+            alert(nome_prod);
+          }
+        } else if (op === 4) {
+          loop_ = false;
+          alert("Obrigada volte sempre");
+        } else {
+          alert("opção invalida ");
+        }
+      }
+    </script>
+  </body>
+</html>
