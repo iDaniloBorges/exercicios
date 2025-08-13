@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="aula9.js"></script>
+  </head>
+  <body>
+    <h3>Compras</h3>
+
+    <script>
+      // function imc(peso, altura){
+      //   let imc  = peso/altura**2
+      //   console.log(imc)
+      // }
+
+      // let peso =  parseFloat(prompt('Peso: '))
+      // let altura =  parseFloat(prompt('altura: '))
+      // imc(peso,altura)
+
+      // function imc(){
+      //     let peso =  parseFloat(prompt('Peso: '))
+      //     let altura =  parseFloat(prompt('altura: '))
+      //     let imc  = peso/(altura**2)
+      //     console.log(imc)
+      // }
+
+      // imc()
+
+      // let peso =  parseFloat(prompt('Peso: '))
+      // let altura =  parseFloat(prompt('altura: '))
+
+      // function imc(){
+      //     let imc  = peso/(altura**2)
+      //     console.log(imc)
+      // }
+
+      // imc()
+
+      // function calculo_tabuada(multiplicador){
+      //  for (n=0;n<=10;n++){
+      //    calculo  =  n * multiplicador
+      //    console.log(multiplicador , 'x ',n, '=', calculo)
+      //  }
+      // }
+
+      // calculo_tabuada(2)
+      // calculo_tabuada(3)
+      // calculo_tabuada(5)
+      // calculo_tabuada(10)
+      // calculo_tabuada(2)
+
+      // const  tabuada = (multiplicador) => {
+      //    console.log(multiplicador)
+      // }
+
+      // console.log(tabuada(5))
+
+      function soma(a, b) {
+        return a + b;
+      }
+
+      function subt(a, b) {
+        return a - b;
+      }
+
+      function mult(a, b) {
+        return a * b;
+      }
+
+      function div(a, b) {
+        return a / b;
+      }
+
+      function calculadora() {
+        let op = prompt("Escolha uma operação:  ");
+
+        if (op === "1") {
+          let n1 = parseFloat(prompt("Digite um numero: "));
+          let n2 = parseFloat(prompt("Digite um numero: "));
+          console.log(soma(n1, n2));
+        } else if (op === "2") {
+          let n1 = parseFloat(prompt("Digite um numero: "));
+          let n2 = parseFloat(prompt("Digite um numero: "));
+
+          //  let valor  =  subt(n1, n2)
+          console.log(subt(n1, n2));
+        } else if (op === "3") {
+          let n1 = parseFloat(prompt("Digite um numero: "));
+          let n2 = parseFloat(prompt("Digite um numero: "));
+          console.log(mult(n1, n2));
+        } else if (op === "4") {
+          let n1 = parseFloat(prompt("Digite um numero: "));
+          let n2 = parseFloat(prompt("Digite um numero: "));
+          console.log(div(n1, n2));
+        }
+      }
+
+      // while (true){
+
+      calculadora();
+
+      // }
+    </script>
+  </body>
+</html>

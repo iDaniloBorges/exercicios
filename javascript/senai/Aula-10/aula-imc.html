@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="aula9.js"></script>
+  </head>
+  <body>
+    <h3>Compras</h3>
+
+    <script>
+      function imc(peso, altura) {
+        let imc = peso / altura ** 2;
+        console.log(imc);
+      }
+
+      let peso = parseFloat(prompt("Peso: "));
+      let altura = parseFloat(prompt("altura: "));
+      imc(peso, altura);
+
+      function imc() {
+        let peso = parseFloat(prompt("Peso: "));
+        let altura = parseFloat(prompt("altura: "));
+        let imc = peso / altura ** 2;
+        console.log(imc);
+      }
+      imc();
+
+      let peso = parseFloat(prompt("Peso: "));
+      let altura = parseFloat(prompt("altura: "));
+
+      function imc() {
+        let imc = peso / altura ** 2;
+        console.log(imc);
+      }
+
+      imc();
+    </script>
+  </body>
+</html>
