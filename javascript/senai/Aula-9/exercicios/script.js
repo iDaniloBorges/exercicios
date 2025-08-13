@@ -66,3 +66,58 @@ while (cont < array2.length) {
   console.log(array2[cont]);
   cont++;
 }
+
+// ***Desafio que mistura for, while e listas***
+
+// **Desafio: Criar um programa de array de compras interativo que:**
+
+// **1 Use um array para armazenar os itens
+// 2 Use while para manter o programa rodando até o usuário decidir sair
+// 3 Use for para mostrar a lista de compras
+// 4 Tenha opções para adicionar, remover e listar itens**
+
+let lista = document.querySelector(".lista");
+
+let listaDeCompras = [
+  "Leite",
+  "Amaciante",
+  "Toddy",
+  "Biscoito",
+  "Arroz",
+  "Feijao",
+  "Macarrao",
+];
+
+function listaAtualizada() {
+  listaDeCompras.forEach((item, index) => {
+    console.log(index, item);
+  });
+}
+
+while (
+  (opcoes = parseInt(
+    prompt(`Escolha uma opção:
+    0- Encerrar
+    1- Adicionar item ao início da lista
+    2- Adicionar item ao fim da lista
+    3- Remover item ao início da lista
+    4- Remover item ao fim da lista`)
+  )) !== 0
+) {
+  if (opcoes == 1) {
+    let itemAdicionado = prompt("Informe o item a ser adicionado");
+    listaDeCompras.unshift(itemAdicionado);
+    listaAtualizada();
+  } else if (opcoes == 2) {
+    let itemAdicionado = prompt("Informe o item a ser adicionado");
+    listaDeCompras.push(itemAdicionado);
+    listaAtualizada();
+  } else if (opcoes == 3) {
+    listaDeCompras.shift();
+    listaAtualizada();
+  } else if (opcoes == 4) {
+    listaDeCompras.pop();
+    listaAtualizada();
+  }
+  console.log("------------------------------------------------------");
+}
