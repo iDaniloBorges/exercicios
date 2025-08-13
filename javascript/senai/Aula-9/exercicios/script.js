@@ -67,6 +67,7 @@ while (cont < array2.length) {
   cont++;
 }
 
+
 // ***Desafio que mistura for, while e listas***
 
 // **Desafio: Criar um programa de array de compras interativo que:**
@@ -76,7 +77,7 @@ while (cont < array2.length) {
 // 3 Use for para mostrar a lista de compras
 // 4 Tenha opções para adicionar, remover e listar itens**
 
-let lista = document.querySelector(".lista");
+// let lista = document.querySelector(".lista");
 
 let listaDeCompras = [
   "Leite",
@@ -101,23 +102,77 @@ while (
     1- Adicionar item ao início da lista
     2- Adicionar item ao fim da lista
     3- Remover item ao início da lista
-    4- Remover item ao fim da lista`)
-  )) !== 0
+    4- Remover item ao fim da lista
+    5- Listar itens`)
+  )) !== 0 &&
+  listaDeCompras.length > 0
 ) {
   if (opcoes == 1) {
     let itemAdicionado = prompt("Informe o item a ser adicionado");
     listaDeCompras.unshift(itemAdicionado);
-    listaAtualizada();
   } else if (opcoes == 2) {
     let itemAdicionado = prompt("Informe o item a ser adicionado");
     listaDeCompras.push(itemAdicionado);
-    listaAtualizada();
   } else if (opcoes == 3) {
     listaDeCompras.shift();
-    listaAtualizada();
   } else if (opcoes == 4) {
     listaDeCompras.pop();
+  } else if (opcoes == 5) {
     listaAtualizada();
   }
   console.log("------------------------------------------------------");
 }
+
+// RESOLVENDO COM FUNCTION
+// function deletePrimeiroItem() {
+//   listaDeCompras.shift();
+//   listaAtualizada();
+// }
+// function deleteUltimoItem() {
+//   listaDeCompras.pop();
+//   listaAtualizada();
+// }
+// function adicionarItemAoInicio(item) {
+//   listaDeCompras.unshift(item);
+//   listaAtualizada();
+// }
+// function adicionarItemAoFim() {
+//   listaDeCompras.push();
+//   listaAtualizada();
+// }
+// const selecinarOpcao = String(prompt(''))
+
+// FRONT END
+
+let lista = document.querySelector(".lista");
+
+// let listaDeCompras = [
+//   "Leite",
+//   "Amaciante",
+//   "Toddy",
+//   "Biscoito",
+//   "Arroz",
+//   "Feijao",
+//   "Macarrao",
+// ];
+
+listaDeCompras.forEach((item) => {
+  document.createElement("li", item);
+});
+
+// Adicionar ao final
+// lista.push("uva");
+
+// Adicionar ao início
+// lista.unshift("morango");
+
+// Remover do final
+// lista.pop();
+
+// Remover do início
+// lista.shift();
+
+// Remover de uma posição específica (exemplo: remover o segundo item)
+// lista.splice(1, 1); // Remove 1 item a partir do índice 1
+// console.log(lista); // ['banana']
+
