@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    // function display(){
+    //  console.log('Teste')
+    // }
+    // display()
+
+    //  Atividade 1: Função de Saudação Personalizada
+    //  Crie uma função chamada saudacao que recebe um nome e um horário
+    //  (manhã, tarde ou noite) e retorna uma saudação apropriada. Utilize parametros.
+
+    function saudacaoPersonalizada(nome, horario) {
+      if (horario === "manhã") {
+        console.log("Bom dia", nome);
+      } else if (horario === "tarde") {
+        console.log("Boa tarde", nome);
+      } else if (horario === "noite") {
+        console.log("Boa noite", nome);
+      }
+    }
+    saudacaoPersonalizada("Pedro", "noite");
+    saudacaoPersonalizada("Caio", "tarde");
+  </script>
+</html>
