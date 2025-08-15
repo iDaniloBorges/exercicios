@@ -72,28 +72,93 @@ console.log(hasUpperString);
 console.log(hasQtd);
 
 function validarSenha() {
-  if (hasQtd && hasString && hasUpperString && hasNumber) {
-    console.log("Sua senha atende aos padrões.");
+  if (senha === "") {
+    console.log("Sua senha não pode estar vazia.");
+    alert("Sua senha não pode estar vazia.");
   } else if (!hasNumber && hasString && hasUpperString && hasQtd) {
-    console.log("Sua senha não tem números.");
-  } else if (!hasString && !hasUpperString && hasQtd) {
-    console.log("Sua senha não tem caracteres.");
-  } else if (hasNumber && hasString && !hasUpperString && hasQtd) {
-    console.log("Sua senha precisa ter pelo menos 1 caracter maiúsculo.");
-  } else if (hasNumber && hasString && hasUpperString && !hasQtd) {
-    console.log("Sua senha precisa ter pelo menos 8 caracteres.");
+    console.log("Sua senha precisa ter pelo menos 1 número");
+    alert("Sua senha precisa ter pelo menos 1 número");
   } else if (!hasNumber && !hasString && hasUpperString && hasQtd) {
-    console.log("Sua senha precisa ter números e letras minúsculas");
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número e 1 letra minúscula"
+    );
+    alert("Sua senha precisa ter pelo menos 1 número e 1 letra minúscula");
+  } else if (!hasNumber && hasString && !hasUpperString && hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número e 1 letra MAIÚSCULA"
+    );
+    alert("Sua senha precisa ter pelo menos 1 número e 1 letra MAIÚSCULA");
+  } else if (!hasNumber && hasString && hasUpperString && !hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número e ter mais de 8 dígitos"
+    );
+    alert("Sua senha precisa ter pelo menos 1 número e ter mais de 8 dígitos");
+  } else if (hasNumber && !hasString && hasUpperString && hasQtd) {
+    console.log("Sua senha precisa ter pelo menos 1 letra minúscula");
+    alert("Sua senha precisa ter pelo menos 1 letra minúscula");
   } else if (hasNumber && !hasString && !hasUpperString && hasQtd) {
-    console.log("Sua senha precisa ter letras minúsculas e maiúsculas");
+    console.log(
+      "Sua senha precisa ter pelo menos 1 letra minúscula e uma letra MAIÚSCULA"
+    );
+    alert(
+      "Sua senha precisa ter pelo menos 1 letra minúscula e uma letra MAIÚSCULA"
+    );
+  } else if (hasNumber && !hasString && hasUpperString && !hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 letra minúscula e ter mais de 8 dígitos"
+    );
+    alert(
+      "Sua senha precisa ter pelo menos 1 letra minúscula e ter mais de 8 dígitos"
+    );
+  } else if (hasNumber && hasString && !hasUpperString && hasQtd) {
+    console.log("Sua senha precisa ter pelo menos 1 letra MAIÚSCULA");
+    alert("Sua senha precisa ter pelo menos 1 letra MAIÚSCULA");
   } else if (hasNumber && hasString && !hasUpperString && !hasQtd) {
     console.log(
-      "Sua senha precisa ter letras e maiúsculas e ter mais de 8 caracteres"
+      "Sua senha precisa ter pelo menos 1 letra MAIÚSCULA e mais de 8 dígitos"
     );
+    alert(
+      "Sua senha precisa ter pelo menos 1 letra MAIÚSCULA e mais de 8 dígitos"
+    );
+  } else if (hasNumber && hasString && hasUpperString && !hasQtd) {
+    console.log("Sua senha precisa ter mais de 8 dígitos");
+    alert("Sua senha precisa ter mais de 8 dígitos");
+  } else if (!hasNumber && !hasString && !hasUpperString && hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra minúscula e 1 letra MAIÚSCULA"
+    );
+    alert(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra minúscula e 1 letra MAIÚSCULA"
+    );
+  } else if (!hasNumber && !hasString && hasUpperString && !hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra minúscula e mais de 8 dígitos"
+    );
+    alert(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra minúscula e mais de 8 dígitos"
+    );
+  } else if (!hasNumber && hasString && !hasUpperString && !hasQtd) {
+    console.log(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra MAIÚSCULA e mais de 8 dígitos"
+    );
+    alert(
+      "Sua senha precisa ter pelo menos 1 número, 1 letra MAIÚSCULA e mais de 8 dígitos"
+    );
+  } else if (hasNumber && !hasString && !hasUpperString && !hasQtd) {
+    console.log(
+      "Sua senha precisa ter 1 letra minúscula, 1 letra MAIÚSCULA e mais de 8 dígitos"
+    );
+    alert(
+      "Sua senha precisa ter 1 letra minúscula, 1 letra MAIÚSCULA e mais de 8 dígitos"
+    );
+  } else {
+    console.log("Sua senha atende aos requisitos.");
+    alert("Sua senha atende aos requisitos.");
   }
 }
 validarSenha(senha);
 
+//TESTE COM LOOPING
 // const numero = "fdgdfg5j5dsfsdfdf";
 // caracter = 0
 // const numero2 = numero[caracter]
@@ -179,3 +244,4 @@ validarSenha(senha);
 // informacoesGeraisTrabalhador();
 
 // totalSalarioTrabalhador = [salario, jornadaDeTrabalhado, horasExtras, valorHoraExtra, totalHorasExtras, salarioFinal]
+
