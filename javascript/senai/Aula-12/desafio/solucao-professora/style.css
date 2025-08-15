@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+margin: 0;
+padding: 0;
+}
+
+#container{
+margin: 1em auto;
+/* width: 100%; */
+/* padding-left: 25px; */
+background: #fff;
+}
+
+
+body{
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.navigation{
+  width: 100%;
+  position: absolute;
+  background-color: blueviolet;
+  color: chartreuse;
+  height: 100px;
+
+  animation-name:navegacao;
+  animation-duration: 2s ;
+}
+
+.navigation ul{
+ margin-top: 0;
+ list-style: none;
+ padding-left: 0;
+ /* text-align: right; */
+ height: 50px;
+
+}
+
+.navigation li{
+display: inline-block;
+padding-left: 30px;
+padding-right:30px;
+font-size: 18px;
+line-height: 50px;
+}
+
+.navigation a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation a:hover{
+    color: chartreuse;
+}
+
+.navigation li.treeline-icon:hover{
+    cursor: pointer;
+    color: chartreuse;
+}
+
+.capa{
+    color: black;
+}
+
+.capa span{
+    color: chartreuse;
+    display: block;
+    padding-left: 0;
+    text-align: center;
+}
+
+
+.capa {
+    display: inline-block;
+    height: 500px;
+}
+
+.profile-pic{
+
+ width: 40%;
+ text-align: center;
+}
+
+.profile-pic img{
+width: 450px;
+border-radius: 80px;
+margin-top: 200px;
+
+animation-name: profile-capa;
+animation-duration: 2s;
+
+}
+
+.profile-title{
+vertical-align: top;
+width: 50%;
+
+animation-name: titulo-capa;
+animation-duration: 2s;
+
+}
+
+.profile-title h1{
+    text-transform: uppercase;
+    font-size: 78px;
+    margin-top: 200px;
+    font-weight: 400px;
+}
+
+.texto_footer{
+    padding: 25px;
+    text-align: center;
+    color: chartreuse;
+}
+
+.rodape{
+    background: blueviolet;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.field{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+textarea{
+    height: 100px;
+}
+.main{
+padding-top:90px;
+padding-right: 180px;
+padding-left: 100px;
+padding-bottom: 80px;
+
+animation-name: conteudo;
+animation-duration: 3s;
+}
+
+.main h1{
+    color: blueviolet;
+    font-weight: normal;
+}
+
+.main h1{
+    font-size: 13px;
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+.caminho ul{
+    list-style: none;
+    padding-left: 0;
+    color: chartreuse;
+}
+
+.caminho li{
+    display: inline-block;
+}
+
+
+@keyframes profile-capa{
+    0%{opacity: 0; transform: translate(0px,20px);}
+    100%{opacity: 1;transform: translate(0px,0px);}
+}
+
+@keyframes titulo-capa{
+    0%{opacity: 0; transform: translate(0px,-20px);}
+    100%{opacity: 1;transform: translate(0px,0px);}
+}
+
+@keyframes conteudo{
+    0%{opacity: 0; transform: translate(-20px,0px);}
+    100%{opacity: 1;transform: translate(0px,0px);}
+}
+
+@keyframes navegacao{
+    0% {opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+@media(max-width:1000px){
+
+.navigation li{
+    display: none
+}
+
+.navigation li.treeline-icon{
+    display: inline-block;
+}
+
+.profile-pic{
+    width: 100%;
+}
+
+.profile-pic img{
+    margin-top: 24px;
+    max-width: 80%;
+}
+
+.profile-title{
+    text-align: center;
+    width: 100%;
+}
+
+.profile-title h1{
+
+    margin-top: 3px;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.main{
+padding-top: 10px;
+padding-left: 5%;
+padding-bottom: 40px;
+padding-left: 5%;
+}
+
+
+.menujs{
+background-color: #000;
+height: auto;
+}
+
+.menujs ul{
+    height: auto;
+    text-align: center;
+    padding: 15%;
+    padding-left: 15%;
+}
+.menu li{
+    display: block;
+    border-bottom: solid chartreuse;
+}
+
+footer{
+    background-color: #000;
+    color: chartreuse;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    height: 80px;
+    
+}
+
+footer:hover{
+    color: chartreuse;
+}
+
+}
