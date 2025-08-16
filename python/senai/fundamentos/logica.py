@@ -107,4 +107,10 @@ f=5
 print('Exercício 16')
 
 condicao16 = 0 or a+b == 90 and a*(a+c) + (b/f) or a+40
-print(condicao6)
+
+# condicao16 = 0 or a+b == 90 and a*(a+c) + (b/f) or a+40
+# false and 15*70 + 7 or 55
+# false or 55
+# 55 = true
+
+print(condicao16)
