@@ -1,1 +1,4 @@
-<a href=""https://idaniloborges.github.io/html-css/>
+## Programação do curso
+```bash
+https://senaisp.notion.site/programacao-em-python
+```
