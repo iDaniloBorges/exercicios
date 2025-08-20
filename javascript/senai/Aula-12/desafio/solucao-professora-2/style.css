@@ -1,0 +1,390 @@
+html, body{
+	margin: 0;
+	padding:0;
+
+
+}
+#container{
+	margin:1em auto;
+	width:650px;
+	background:#fff;
+	
+}
+
+
+
+body{background-color: white;
+font-family: 'Montserrat', sans-serif;
+}
+
+
+.navigation{
+	background-color: #7600a9;
+	color:#00FF00;
+	height:50px;
+
+	animation-name: navegacao;
+	animation-duration:4s;
+
+
+}
+
+
+.navigation ul{
+	margin-top:0;
+	list-style:none;
+	padding-left:0;
+	text-align: right;
+	height:50px;
+
+}
+.navigation li{
+   display:inline-block;
+   padding-left:30px;
+   padding-right: 30px;
+   line-height:50px;
+ font-size:18px;
+}
+.navigation a{
+color:white;
+text-decoration: none;
+}
+.navigation a:hover{
+color:#00FF00;
+}
+.navigation li.threeline-icon {
+	display: none;
+}
+
+.navigation li.threeline-icon:hover{
+color:#00ff00 ;
+cursor: pointer;	
+}	
+.capa{
+color:#000000;
+}
+.capa span{
+	color:#00ff00 ;
+	display:block;
+	padding-left:0;
+  text-align: center;
+	
+
+}
+
+.capa div{
+	display:inline-block;
+    height:520px;
+}
+/* espaço relativo a img*/
+.profile-pic{
+width:40%;
+text-align:center;
+
+
+}
+/* espaço relativo a span*/
+.profile-pic img{
+width: 325px;
+border-radius:80px;
+margin-top:200px;
+
+
+animation-name:profile-capa;
+animation-duration:2s;
+}
+
+/* espaço relativo a div da direita*/
+ .profile-title{
+	vertical-align:top;
+	width: 59%;
+	
+
+	animation-name:titulo-capa;
+	animation-duration:3s;
+}
+
+.profile-title h1{
+text-transform: uppercase;
+font-size:78px;
+margin-top:200px;
+font-weight:400px;
+
+
+
+}
+.profile-title h2{
+font-size: 16px;
+font-weight: 100;
+margin-top: -26px;
+
+}
+
+.bea {
+padding: 25px ;
+text-align:  center;
+
+}
+
+.rodape {
+background: #7600a9;
+width: 100%;
+height: 100px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+  
+
+	
+		
+	
+.main{
+	/*
+	padding: 80px 180px 80px 100px(opção para utilizar a propriedade) caso coloque 3 valores ele considera a mesma coisa, 2 valores sera
+considerado para cima e para baixo. Com um valor ele considera o padding para os quatro.
+	*/
+	padding-top:90px;
+	padding-right:180px;
+    padding-bottom:80px;
+	padding-left:100px;
+
+	animation-name:conteudo;
+	animation-duration:2s;
+
+}
+.main h1{
+	color:#144130 ;
+	font-weight:normal;
+
+}
+.main h2{
+	color: #000000;
+	font-size: 16px;
+    text-transform: uppercase;
+font-weight:normal;
+margin-top:40px;
+}
+.main h3{
+font-size:12px;
+color:#00FF00;
+text-transform:uppercase;
+
+}
+.main p{
+	font-size:18px;
+	font-weight:100;
+	color:black;
+	line-height:24px;
+	text-align:justify;
+}
+.caminho ul{
+	list-style:none;
+	padding-left:0;
+color:#00FF00;
+
+}
+.caminho li{
+display:inline-block;
+}
+.cv-pic{
+	float:left;
+	width:200px;
+	margin-right:20px;
+	margin-bottom:20px;
+}
+.social-img{
+width:45px;
+margin-right: 20px;
+}
+.miniatura{
+	width:300px;
+	height: 300px;
+	display: inline-block;
+	margin-right:15px;
+	margin-bottom:15px;
+	background-size: contain;
+	overflow: hidden;
+
+}
+.miniatura a{
+	text-decoration: none;
+
+}
+.blackbox{
+	width:100%;
+	height: 100%;
+	background-color:#000000;
+	opacity: 0;
+	padding-top:120px;
+
+}
+.blackbox:hover{
+   opacity:0.7;
+   transition:3s;
+}
+.blackbox-text{
+	text-align:center;
+}
+.blackbox-text h1{
+font-size:16px;
+color: white;
+text-transform: uppercase;
+margin-top: 0px;
+}
+.blackbox-text h2{
+	text-transform: none;
+	font-weight: 100;
+	margin-top: 0;
+}
+.foto-trabalhos{
+	width:100%;
+	margin-bottom:10 px;
+	margin-top: 10px;
+}
+.back-link{
+	color:#000000;
+}
+footer{
+	background-color:#000000;
+	color:white;
+	list-style:none;
+	padding-left:0%;
+	text-align: left;
+	height:30px;
+	}
+	footer:hover{
+	Color:#00ff00;
+	}
+	footer h5{
+	text-align: left;
+	color: #00FF00;
+	cursor: pointer;}
+
+
+/*css animation Keyframe*/
+/*css animation Keyframe*/
+@keyframes profile-capa{
+	0%{opacity: 0; transform: translate(0px,20px)}
+	100%{opacity: 1; transform:translate(0px,0px)}
+}
+@keyframes titulo-capa{
+	0%{opacity: 0; transform: translate(0px,-20px)}
+	100%{opacity: 1; transform:translate(0px,0px)}
+}
+@keyframes conteudo{
+	0%{opacity: 0; transform: translate(-20px,0px)}
+	100%{opacity: 1; transform:translate(0px,0px)}
+}
+@keyframes navegacao{
+   0%{opacity:0;}
+   50%{opacity:0;}
+100%{opacity:1};
+}
+
+/*propriedade para serem utilizadas com telas pequenas, é específico - cel.*//* função*/ 
+@media(max-width: 1000px) { 
+
+@media(max-width: 1000px){
+
+.navigation li{
+display:none;
+
+}
+.navigation li.threeline-icon{
+display:inline-block;
+}
+
+.capa div{
+display:block;
+height:auto;
+}
+.profile-pic{
+
+width:100%;
+}
+.profile-pic img{
+margin-top:24px;
+max-width:80%;
+
+}
+.profile-title {
+text-align:center;
+width:100%;
+
+}
+.profile-title h1{
+margin-top:30px;
+font-size:36px;
+margin-left:20px;
+margin-right:20px;
+}
+.profile-title h2{
+margin-top:3px;
+margin-left:20px;
+margin-right:20px;
+}
+.main{
+	padding-top:10px;
+	padding-right:5%;
+    padding-bottom:40px;
+	padding-left:5%;
+
+	animation-name:conteudo;
+	animation-duration:2s;
+}
+.main {
+	text-align:left;
+	line-height: 30px;
+	
+}
+.caminho li{
+	font-size:12px;
+}
+.cv-pic{
+	float:none;
+	max-width:100%;
+	margin-right:0px;
+
+}
+.miniatura{
+	max-width:100%;
+	background-size:auto 100%;
+}
+.blackbox {
+	opacity: 0.8;
+}
+
+.menujs{
+	background-color:#000000;
+	height:auto;
+
+}
+
+.menujs ul{
+height:auto;
+text-align:center;
+padding-right: 15%;
+padding-left:15%;
+}
+
+.menujs li{
+	display:block;
+	/* linhas - cor e espessura*/
+	border-bottom: solid #00FF00 1px;
+	
+}
+
+footer{
+	background-color:#03112D;
+	color:#00FF00;
+	list-style:none;
+	padding-left:0;
+	text-align: left;
+	height:80px;
+	}
+	footer:hover{
+	Color:#00ff00;
+	}	
+}
+}
