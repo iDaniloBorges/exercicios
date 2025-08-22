@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema cad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+    }
+    .secao {
+      max-width: 800px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .cabecalho {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+    .cabecalho h2 {
+      font-weight: 600;
+    }
+    .form_c {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #6c5ce7;
+    }
+    .btn-primary {
+      background-color: #6c5ce7;
+      border-color: #6c5ce7;
+    }
+    .btn-primary:hover {
+      background-color: #5643c4;
+      border-color: #5643c4;
+    }
+    .btn-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn-action {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+    }
+    .table-responsive {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .table th {
+      background-color: #6c5ce7;
+      color: white;
+    }
+    .status-message {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .status-message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cpf-input {
+      font-family: monospace;
+    }
+    .action-buttons {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="secao">
+    <!-- Cabeçalho -->
+    <div class="cabecalho">
+      <h2><i class="fas fa-users me-2"></i>Cadastro de Pessoas</h2>
+      <p class="text-muted">Sistema simples para gerenciar nomes e CPFs</p>
+    </div>
+
+    <!-- Form-->
+    <div class="form_c">
+      <form id="formCadastro">
+        <input type="hidden" id="editId" value="">
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required placeholder="Digite o nome">
+          </div>
+          <div class="col-md-5 mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control cpf-input" id="cpf" required placeholder="000.000.000-00" maxlength="14">
+          </div>
+          <div class="col-md-2 mb-3 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100" id="btnSubmit">
+              <i class="fas fa-save me-1"></i> Salvar
+            </button>
+          </div>
+        </div>
+      </form>
+      
+      <!-- btões -->
+      <div class="btn-actions">
+        <button type="button" class="btn btn-warning" id="btnAlterar" disabled>
+          <i class="fas fa-edit me-1"></i> Alterar
+        </button>
+        <button type="button" class="btn btn-info" id="btnAtualizar">
+          <i class="fas fa-sync-alt me-1"></i> Atualizar Lista
+        </button>
+        <button type="button" class="btn btn-secondary" id="btnCancelar" style="display: none;">
+          <i class="fas fa-times me-1"></i> Cancelar
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabela de  -->
+    <h4 class="mb-3"><i class="fas fa-table me-2"></i>Registros</h4>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaDados">
+          <!--  inserir via Js -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ----------- -->
+
+  <!-- Status Message -->
+  <div class="status-message alert alert-success" role="alert" id="statusMessage">
+    <i class="fas fa-check-circle me-2"></i>
+    <span id="statusText">Operação realizada com sucesso!</span>
+  </div>
+
+  <script>
+    // vaariáveis globais
+
+    let editingId = null;
+    let pessoas = JSON.parse(localStorage.getItem('pessoas')) || [];
+    
+    // formatar de CPF
+    function formatarCPF(cpf) {
+      cpf = cpf.replace(/\D/g, '');
+      if (cpf.length > 9) {
+        return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+      } else if (cpf.length > 6) {
+        return cpf.replace(/(\d{3})(\d{3})(\d{3})/, '$1.$2.$3');
+      } else if (cpf.length > 3) {
+        return cpf.replace(/(\d{3})(\d{3})/, '$1.$2');
+      }
+      return cpf;
+    }
+
+    //  máscara de CPF enquanto digita
+    document.getElementById('cpf').addEventListener('input', function(e) {
+      e.target.value = formatarCPF(e.target.value);
+    });
+
+    //  status
+    function showStatus(message, isError = false) {
+      const statusElement = document.getElementById('statusMessage');
+      const statusText = document.getElementById('statusText');
+      
+      statusText.textContent = message;
+      statusElement.className = `status-message alert ${isError ? 'alert-danger' : 'alert-success'} show`;
+      
+      setTimeout(() => {
+        statusElement.classList.remove('show');
+      }, 3000);
+    }
+//////////////////////////////////////////////////////////////////////////////////
+    // Salvar dados no localStorage//////
+    function salvarDados() {
+      localStorage.setItem('pessoas', JSON.stringify(pessoas));
+    }
+/////////////////////////////////////////////////////////////////////////////////
+    // Adicionar ou atualizar 
+    document.getElementById('formCadastro').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('nome').value.trim();
+      const cpf = document.getElementById('cpf').value.trim();
+      
+      if (!nome) {
+        showStatus('Por favor, informe o nome!', true);
+        return;
+      }
+      
+      if (!cpf || cpf.length < 14) {
+        showStatus('Por favor, informe um CPF válido!', true);
+        return;
+      }
+      
+      if (editingId !== null) {
+        // atualizar
+        const index = pessoas.findIndex(p => p.id === editingId);
+        if (index !== -1) {
+          pessoas[index] = { id: editingId, nome, cpf };
+          showStatus('Registro atualizado com sucesso!');
+        }
+      } else {
+        //  novo registro
+        const newId = pessoas.length > 0 ? Math.max(...pessoas.map(p => p.id)) + 1 : 1;
+        pessoas.push({ id: newId, nome, cpf });
+        showStatus('Registro adicionado com sucesso!');
+      }
+      
+      salvarDados();
+      cancelarEdicao();
+      mostrarDados();
+    });
+
+    // Alterar
+    document.getElementById('btnAlterar').addEventListener('click', function() {
+      const selected = document.querySelector('input[name="pessoaSelect"]:checked');
+      if (!selected) {
+        showStatus('Selecione um registro para alterar!', true);
+        return;
+      }
+      
+      const id = parseInt(selected.value);
+      const pessoa = pessoas.find(p => p.id === id);
+      
+      if (pessoa) {
+        document.getElementById('editId').value = id;
+        document.getElementById('nome').value = pessoa.nome;
+        document.getElementById('cpf').value = pessoa.cpf;
+        
+        editingId = id;
+        document.getElementById('btnSubmit').innerHTML = '<i class="fas fa-edit me-1"></i> Atualizar';
+        document.getElementById('btnCancelar').style.display = 'block';
+        
+        // desmarca seleção
+        selected.checked = false;
+      }
+    });
+
+    // btn cancela 
+    document.getElementById('btnCancelar').addEventListener('click', cancelarEdicao);
+    
+    function cancelarEdicao() {
+      document.getElementById('formCadastro').reset();
+      document.getElementById('editId').value = '';
+      editingId = null;
+      document.getElementById('btnSubmit').innerHTML = '<i class="fas fa-save me-1"></i> Salvar';
+      document.getElementById('btnCancelar').style.display = 'none';
+      
+      // desmarca seleção
+      const selected = document.querySelector('input[name="pessoaSelect"]:checked');
+      if (selected) selected.checked = false;
+    }
+
+
+    document.getElementById('btnAtualizar').addEventListener('click', function() {
+      mostrarDados();
+      showStatus('Lista atualizada!');
+    });
+
+    // delete
+    function deletarRegistro(id) {
+      if (confirm('Tem certeza que deseja excluir este registro?')) {
+        pessoas = pessoas.filter(p => p.id !== id);
+        salvarDados();
+        mostrarDados();
+        showStatus('Registro excluído com sucesso!');
+      }
+    }
+
+    // dados tabela 
+    function mostrarDados() {
+      const tbody = document.getElementById('tabelaDados');
+      tbody.innerHTML = '';
+      
+      if (pessoas.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="4" class="text-center text-muted py-4">
+              <i class="fas fa-database fs-1 d-block mb-2"></i>
+              Nenhum registro cadastrado
+            </td>
+          </tr>
+        `;
+        document.getElementById('btnAlterar').disabled = true;
+        return;
+      }
+      
+      document.getElementById('btnAlterar').disabled = false;
+      
+      pessoas.forEach(pessoa => {
+        const tr = document.createElement('tr');
+        
+        
+        // mostrar no html 
+
+        tr.innerHTML = `
+          <td>${pessoa.id}</td>
+          <td>${pessoa.nome}</td>
+          <td>${pessoa.cpf}</td>
+          <td class="action-buttons">
+            <button class="btn btn-sm btn-outline-danger" onclick="deletarRegistro(${pessoa.id})" title="Excluir">
+              <i class="fas fa-trash"></i>
+            </button>
+            <input type="radio" name="pessoaSelect" value="${pessoa.id}" class="ms-2" title="Selecionar para edição">
+          </td>
+        `;
+        
+        tbody.appendChild(tr);
+      });
+    }
+
+    // 
+    document.addEventListener('DOMContentLoaded', function() {
+      mostrarDados();
+    });
+  </script>
+</body>
+</html>
+
+
+

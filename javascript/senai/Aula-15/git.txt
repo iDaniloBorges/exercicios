@@ -1,0 +1,17 @@
+1 - Instalar o git - link de instalação winget install -e --id Git.Git
+2 - ter conta no gihub
+3 - criar um repositorio
+4 - verificar se o git esta instalado na maquina git —version ou git —help
+5 - criar uma pasta no pc colocar o projeto
+6 - clique com o botão direito na pasta escolha git bash
+7 - git init
+8 - git status
+9 - git add . - manda para área de preparação
+10 - git status
+11 - git commit -m “nome_alteração”
+12 - vai pedir para configurar o acesso email e usuario
+13 - git commit
+14 - git remote add origin “LINK DO REPOSITÓRIO”
+15 - git push —set -uptream origin
+16 - autorizar na interface do git
+esta na branch master 
