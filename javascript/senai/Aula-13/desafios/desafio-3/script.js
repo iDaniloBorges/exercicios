@@ -3,33 +3,69 @@
 // # DESAFIO: Sistema de Cálculo Trabalhista
 
 // Passe o sistema de calculo trabalhista para o paradigma de programação a objetos.
-
-// calcule a hora do colaborador
-
-// calcule a hora extra
-
-// calcule a quantidade de hora extra
-
-// faça o calculo do salário mais a extra
-
 class Salario {
-  constructor(carga, Salario) {
+  constructor(carga, salario, qtdHorasExtras, valorHorasExtras) {
     this.carga = carga;
     this.salario = salario;
+    this.qtdHorasExtras = qtdHorasExtras;
+    this.valorHorasExtras = valorHorasExtras;
   }
+
+  // calcule a hora do colaborador
   horaColaborador() {
-    let cal = this.salario / this.carga;
-    return cal;
+    let calculo = this.salario / this.carga;
+    return calculo;
   }
-  extraColaborador(hColaborador) {
-    let cal = hColaborador * 1.5;
-    return cal;
+
+  // calcule a hora extra
+  valorHoraExtra() {
+    let calculo = this.horaColaborador() * this.valorHorasExtras;
+    return calculo;
   }
-  quantidadeExtra(quantidade, hColaborador) {
-    let cal = quantidade * hColaborador;
-    return cal;
+
+  // calcule a quantidade de hora extra
+  totalHoraExtra() {
+    let calculo = this.qtdHorasExtras * this.valorHoraExtra();
+    return calculo;
   }
-  salarioTotal(salario, quantidadeExtra) {
-    return salario + quantidadeExtra;
+  // faça o calculo do salário mais a extra
+  totalSalario() {
+    let calculo = this.salario + this.totalHoraExtra(this.valorHoraExtra());
+    return calculo;
   }
 }
+
+const carga = Number(prompt("Digite a quantidade de horas trabalhadas no mês"));
+const salario = Number(prompt("Digite o o valor do salário"));
+const qtdHorasExtras = Number(
+  prompt("Digite a quantidade de horas extras trabalhadas no mês")
+);
+const valorHorasExtras = Number(prompt("Digite o valor da hora extra"));
+
+const salarioFuncionario = new Salario(
+  carga,
+  salario,
+  qtdHorasExtras,
+  valorHorasExtras
+);
+
+console.log(
+  `O valor da hora do colaborador é R$ ${salarioFuncionario
+    .horaColaborador()
+    .toFixed(2)}`
+);
+console.log(
+  `O valor da hora extra do colaborador é R$ ${salarioFuncionario
+    .valorHoraExtra()
+    .toFixed(2)}`
+);
+console.log(
+  `O total de horas extras do colaborador é R$ ${salarioFuncionario
+    .totalHoraExtra()
+    .toFixed(2)}`
+);
+console.log(
+  `O salário total do colaborador é R$ ${salarioFuncionario
+    .totalSalario()
+    .toFixed(2)}`
+);
